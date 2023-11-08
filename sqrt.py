@@ -7,13 +7,15 @@ Usage: sqrt.py --n=<n>
 Options:
 --n=<n>    Number for which the square root should be calculated
 """
-
+#i have changed code
 from docopt import docopt
 import math
 
 opt = docopt(__doc__)
 
 def main(number):
+  if number < 0:
+    raise Exception("n should not a positive number")
   number = int(number)
   print(math.sqrt(number))
     
